@@ -1,4 +1,22 @@
-* {
+/* COLORS DEFINITON */
+:root{
+    --primary: #222831;
+    --secondary: #393E46;
+    --text: #EEEEEE;
+    --detail: #00ADB5;
+    --highlight:#00f4ff;
+}
+
+*{
     padding: 0;
     margin: 0;
+}
+
+body{
+    background-color: var(--primary);
+}
+
+#banner{
+    background-color: var(--secondary);
+    height: 500px;
 }
