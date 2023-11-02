@@ -1,9 +1,16 @@
 let cols = Math.floor(document.body.clientWidth / 50);
-let rows = Math.floor(cols/3);
+let rows = Math.ceil(cols/3);
 
 const wrapper = document.getElementById("banner");
 wrapper.style.setProperty("--columns", cols);
 wrapper.style.setProperty("--rows", rows);
+wrapper.onclick = e => {
+    anime({
+        targets: '.tile',
+        rotate: '1turn',
+        duration: 1000,
+      });
+}
 
 const createTile = (index) => {
     // Generate single tile
@@ -25,7 +32,7 @@ const createGrid = () => {
 
     // Recalculate col and row count
     cols = Math.floor(document.body.clientWidth / 50);
-    rows = Math.floor(cols/3); 
+    rows = Math.ceil(cols/3); 
 
     // Update css vars
     wrapper.style.setProperty("--columns", cols);
