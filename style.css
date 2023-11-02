@@ -18,5 +18,14 @@ body{
 
 #banner{
     background-color: var(--secondary);
-    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+.tile{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    outline: 1px solid white;
 }

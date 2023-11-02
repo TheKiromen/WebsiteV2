@@ -1,13 +1,44 @@
-const wrapper = document.getElementById("banner");
+let cols = Math.floor(document.body.clientWidth / 50);
+let rows = Math.floor(cols/3);
 
-let tmp = () => {
-    wrapper.innerHTML="Hello World";
+const wrapper = document.getElementById("banner");
+wrapper.style.setProperty("--columns", cols);
+wrapper.style.setProperty("--rows", rows);
+
+const createTile = (index) => {
+    // Generate single tile
+    const tile = document.createElement("div");
+    tile.classList.add("tile");
+    return tile;
 }
 
+const createTiles = (quantity) => {
+    // Generate list of tile nodes
+    Array.from(Array(quantity)).map((tile,index) => {
+        wrapper.appendChild(createTile(index));
+    })
+}
+
+const createGrid = () => {
+    // Clear out the nodes
+    wrapper.innerHTML = "";
+
+    // Recalculate col and row count
+    cols = Math.floor(document.body.clientWidth / 50);
+    rows = Math.floor(cols/3); 
+
+    // Update css vars
+    wrapper.style.setProperty("--columns", cols);
+    wrapper.style.setProperty("--rows", rows); 
+
+    createTiles(cols * rows);
+}
+
+window.onresize = () => createGrid();
+createTiles(cols * rows);
+
 // TODO:
-// Set height to be proportional to width (1.61  w/h ratio?)
 // Make banner background an animated gradient (angled 45deg?)
-// Generate the tiles
 // Style the tiles as in video
 // Make them interactive
 // Figure out how to make them into a logo??
