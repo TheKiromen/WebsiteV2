@@ -4,11 +4,23 @@ let rows = Math.ceil(cols/3);
 const wrapper = document.getElementById("banner");
 wrapper.style.setProperty("--columns", cols);
 wrapper.style.setProperty("--rows", rows);
-wrapper.onclick = e => {
+
+let count = -1;
+const colors = [
+    "rgb(255,0,0)",
+    "rgb(0,255,0)",
+    "rgb(0,0,255)"
+]
+
+const handleOnClick = index => {
+    count++;
+
     anime({
         targets: '.tile',
-        rotate: '1turn',
-        duration: 1000,
+        backgroundColor: colors[count % colors.length],
+        delay: anime.stagger(50, {
+            grid: [cols, rows]
+        })
       });
 }
 
@@ -16,6 +28,7 @@ const createTile = (index) => {
     // Generate single tile
     const tile = document.createElement("div");
     tile.classList.add("tile");
+    tile.onclick = e => handleOnClick(index);
     return tile;
 }
 
