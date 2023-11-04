@@ -17,6 +17,7 @@ const colors = [
 const handleOnClick = index => {
     count++;
 
+    // TODO: Change animation to toggle showing tiles
     anime({
         targets: '.tile',
         backgroundColor: colors[count % colors.length],
@@ -62,8 +63,3 @@ const createGrid = () => {
 
 window.onresize = () => createGrid();
 createTiles(cols * rows);
-
-// TODO:
-// Make banner background an animated gradient (angled 45deg?)
-// Style the tiles as in video
-// Figure out how to make them into a logo??
