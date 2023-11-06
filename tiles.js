@@ -26,7 +26,7 @@ const createTile = (index) => {
     // Generate single tile
     const tile = document.createElement("div");
     tile.classList.add("tile");
-    tile.id = "t"+index;
+    tile.appendChild(document.createElement("div")).classList.add("nestedTile");
     tile.onclick = e => handleOnClick(index);
     return tile;
 }

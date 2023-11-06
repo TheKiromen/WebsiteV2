@@ -33,14 +33,20 @@ body{
 .tile{
     position: relative;
     cursor: pointer;
+    background-color: #222831;
 }
 
-.tile::before{
+/* .tile::before{
     background-color: var(--primary);
     position: absolute;
     content: "";
     inset: 1px;
+    transition: background-color 0.1s;
 }
+
+.tile:hover::before{
+    background-color: var(--detail);
+} */
 
 @keyframes background-pan {
     from {
