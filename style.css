@@ -32,21 +32,36 @@ body{
 
 .tile{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nestedTile{
     cursor: pointer;
-    background-color: #222831;
-}
-
-/* .tile::before{
+    height:95%;
+    width:95%;
     background-color: var(--primary);
-    position: absolute;
-    content: "";
-    inset: 1px;
-    transition: background-color 0.1s;
+    transition: opacity 0.3s;
 }
 
-.tile:hover::before{
-    background-color: var(--detail);
-} */
+.nestedTile:hover{
+    opacity: 0;
+}
+
+@media only screen and (max-width:700px){
+    .nestedTile{
+        height:90% !important;
+        width:90% !important;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .nestedTile{
+        height:100% !important;
+        width:100% !important;
+    }
+}
 
 @keyframes background-pan {
     from {
