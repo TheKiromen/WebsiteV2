@@ -32,14 +32,35 @@ body{
 
 .tile{
     position: relative;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.tile::before{
+.nestedTile{
+    cursor: pointer;
+    height:95%;
+    width:95%;
     background-color: var(--primary);
-    position: absolute;
-    content: "";
-    inset: 1px;
+    transition: opacity 0.3s;
+}
+
+.nestedTile:hover{
+    opacity: 0;
+}
+
+@media only screen and (max-width:700px){
+    .nestedTile{
+        height:90% !important;
+        width:90% !important;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .nestedTile{
+        height:100% !important;
+        width:100% !important;
+    }
 }
 
 @keyframes background-pan {
@@ -50,4 +71,8 @@ body{
     to {
         background-position: -200% center;
     }
+}
+
+.logoTile{
+    opacity: 1 !important;
 }
