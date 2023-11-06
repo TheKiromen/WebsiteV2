@@ -1,5 +1,5 @@
 let tileSize = Math.floor(document.body.clientWidth / 50);
-
+// TODO: make cols/rows const. derive tileSize from it
 let cols = Math.floor(document.body.clientWidth / tileSize);
 let rows = Math.ceil(cols/3);
 
@@ -26,7 +26,15 @@ const createTile = (index) => {
     // Generate single tile
     const tile = document.createElement("div");
     tile.classList.add("tile");
-    tile.appendChild(document.createElement("div")).classList.add("nestedTile");
+
+    // TODO: Based on tile size pick which tiles to mark as "not vanishing ones" to create a logo
+    if(index%5==0){tile.classList.add("logoTile")}
+
+    // Nest div inside a tile
+    const nestedTile = document.createElement("div");
+    nestedTile.classList.add("nestedTile");
+    tile.appendChild(nestedTile);
+
     tile.onclick = e => handleOnClick(index);
     return tile;
 }
