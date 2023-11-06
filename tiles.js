@@ -44,7 +44,7 @@ const createGrid = () => {
     wrapper.innerHTML = "";
 
     // Update variables
-    tileSize = Math.ceil(document.body.clientWidth / 50);
+    tileSize = Math.floor(document.body.clientWidth / 50);
     cols = Math.floor(document.body.clientWidth / tileSize);
     rows = Math.ceil(cols/3); 
     toggled = false;
