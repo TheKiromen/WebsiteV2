@@ -7,20 +7,14 @@ const wrapper = document.getElementById("banner");
 wrapper.style.setProperty("--columns", cols);
 wrapper.style.setProperty("--rows", rows);
 
-let count = -1;
-const colors = [
-    "rgb(255,0,0)",
-    "rgb(0,255,0)",
-    "rgb(0,0,255)"
-]
+let toggled = false;
 
 const handleOnClick = index => {
-    count++;
+    toggled = !toggled;
 
-    // TODO: Change animation to toggle showing tiles
     anime({
-        targets: '.tile',
-        backgroundColor: colors[count % colors.length],
+        targets: ".tile",
+        opacity: toggled ? 0 : 1,
         delay: anime.stagger(10, {
             grid: [cols, rows],
             from: index
@@ -32,6 +26,7 @@ const createTile = (index) => {
     // Generate single tile
     const tile = document.createElement("div");
     tile.classList.add("tile");
+    tile.id = "t"+index;
     tile.onclick = e => handleOnClick(index);
     return tile;
 }
@@ -48,10 +43,11 @@ const createGrid = () => {
     // Clear out the nodes
     wrapper.innerHTML = "";
 
-    // Recalculate col and row count
+    // Update variables
     tileSize = Math.ceil(document.body.clientWidth / 50);
     cols = Math.floor(document.body.clientWidth / tileSize);
     rows = Math.ceil(cols/3); 
+    toggled = false;
 
     // Update css vars
     wrapper.style.setProperty("--columns", cols);
