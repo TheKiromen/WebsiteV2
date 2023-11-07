@@ -1,7 +1,6 @@
-let tileSize = Math.floor(document.body.clientWidth / 50);
-// TODO: make cols/rows const. derive tileSize from it
-let cols = Math.floor(document.body.clientWidth / tileSize);
-let rows = Math.ceil(cols/3);
+const cols = 50;
+const rows = 16;
+let tileSize = document.body.clientWidth/cols;
 
 const wrapper = document.getElementById("banner");
 wrapper.style.setProperty("--columns", cols);
@@ -51,15 +50,9 @@ const createGrid = () => {
     // Clear out the nodes
     wrapper.innerHTML = "";
 
-    // Update variables
-    tileSize = Math.floor(document.body.clientWidth / 50);
-    cols = Math.floor(document.body.clientWidth / tileSize);
-    rows = Math.ceil(cols/3); 
+    // Recalculate tile size
+    tileSize = document.body.clientWidth/cols; 
     toggled = false;
-
-    // Update css vars
-    wrapper.style.setProperty("--columns", cols);
-    wrapper.style.setProperty("--rows", rows); 
 
     createTiles(cols * rows);
 }
