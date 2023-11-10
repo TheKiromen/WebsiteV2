@@ -20,14 +20,14 @@ const handleOnClick = (index, e) => {
         let opacity = 0;
 
         if(logoIndexes.includes(index)){
-            logoIndexes.pop(index);
+            logoIndexes.splice(logoIndexes.indexOf(index),1);
         }else{
             opacity = 1;
             logoIndexes.push(index);
         }
 
         e.target.style.opacity = opacity;
-        console.log(logoIndexes);
+        console.log(logoIndexes.toString());
     }
     
     // anime({
