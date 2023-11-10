@@ -1,10 +1,14 @@
-const cols = 50;
-const rows = 16;
+const cols = 51;
+const rows = 17;
 let tileSize = document.body.clientWidth/cols;
 
 const wrapper = document.getElementById("banner");
 wrapper.style.setProperty("--columns", cols);
 wrapper.style.setProperty("--rows", rows);
+
+// TODO: Fill with apropriate indexes to create logo
+// Middle of the canvas (25, 8), where 8 = index 433 ((51*8)+25)
+const logoTiles = [0, 25, 50, 408, 433, 458, 816, 841, 866];
 
 let toggled = false;
 
@@ -26,8 +30,10 @@ const createTile = (index) => {
     const tile = document.createElement("div");
     tile.classList.add("tile");
 
-    // TODO: Based on tile size pick which tiles to mark as "not vanishing ones" to create a logo
-    if(index%5==0){tile.classList.add("logoTile")}
+    // Create logo from tiles
+    if(logoTiles.includes(index)){
+        tile.classList.add("logoTile");
+    }
 
     // Nest div inside a tile
     const nestedTile = document.createElement("div");
