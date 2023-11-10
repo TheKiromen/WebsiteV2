@@ -37,17 +37,22 @@ body{
     align-items: center;
 }
 
+.logoTile{
+    opacity: 1 !important;
+}
+
 .nestedTile{
     cursor: pointer;
     height:95%;
     width:95%;
     background-color: var(--primary);
     transition: opacity 0.3s;
-}
-
-.nestedTile:hover{
     opacity: 0;
 }
+
+/* .nestedTile:hover{
+    opacity: 0;
+} */
 
 @media only screen and (max-width:700px){
     .nestedTile{
@@ -71,8 +76,4 @@ body{
     to {
         background-position: -200% center;
     }
-}
-
-.logoTile{
-    opacity: 1 !important;
 }

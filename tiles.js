@@ -8,21 +8,24 @@ wrapper.style.setProperty("--rows", rows);
 
 // TODO: Fill with apropriate indexes to create logo
 // Middle of the canvas (25, 8), where 8 = index 433 ((51*8)+25)
-const logoTiles = [0, 25, 50, 408, 433, 458, 816, 841, 866];
+const logoTiles = [433];
 
 let toggled = false;
 
-const handleOnClick = index => {
+const handleOnClick = (index, e) => {
     toggled = !toggled;
 
-    anime({
-        targets: ".tile",
-        opacity: toggled ? 0 : 1,
-        delay: anime.stagger(10, {
-            grid: [cols, rows],
-            from: index
-        })
-      });
+    console.log(e.target.childNodes[0]);
+    e.target.style.opacity = 1;
+
+    // anime({
+    //     targets: ".tile",
+    //     opacity: toggled ? 0 : 1,
+    //     delay: anime.stagger(10, {
+    //         grid: [cols, rows],
+    //         from: index
+    //     })
+    //   });
 }
 
 const createTile = (index) => {
@@ -40,7 +43,12 @@ const createTile = (index) => {
     nestedTile.classList.add("nestedTile");
     tile.appendChild(nestedTile);
 
-    tile.onclick = e => handleOnClick(index);
+    if(logoTiles.includes(index)){
+        nestedTile.style.opacity = 1;
+        nestedTile.style.background = "#f00"
+    }
+
+    tile.onclick = e => handleOnClick(index, e);
     return tile;
 }
 
