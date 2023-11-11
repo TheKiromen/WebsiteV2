@@ -11,6 +11,15 @@ let toggled = false;
 const handleOnClick = index => {
     toggled = !toggled;
 
+    // TODO: calculate duration based on tile clicked? (tile in the middle - 2s, tile closer to border - longer duration (6s?))
+    let rowNum = Math.floor(index/50)+1;
+    let colNum = (index % 51)+1;
+    // console.log(colNum + " | " + rowNum);
+    let distToCenter = Math.abs(colNum - Math.ceil(cols/2));
+    console.log(distToCenter);
+    
+    let duration = 2000;
+
     anime({
         targets: ".tile",
         opacity: toggled ? 0 : 1,
@@ -20,11 +29,12 @@ const handleOnClick = index => {
         })
       });
 
-      anime({
+    anime({
         targets: "#logoImg",
         opacity: toggled ? 1 : 0,
-        duration: 2000
-      })
+        duration: duration
+    })
+
 }
 
 const createTile = (index) => {
