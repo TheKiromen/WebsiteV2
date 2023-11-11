@@ -19,6 +19,12 @@ const handleOnClick = index => {
             from: index
         })
       });
+
+      anime({
+        targets: "#logoImg",
+        opacity: toggled ? 1 : 0,
+        duration: 2000
+      })
 }
 
 const createTile = (index) => {
