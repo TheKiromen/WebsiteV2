@@ -6,10 +6,6 @@ const wrapper = document.getElementById("banner");
 wrapper.style.setProperty("--columns", cols);
 wrapper.style.setProperty("--rows", rows);
 
-// TODO: Fill with apropriate indexes to create logo
-// Middle of the canvas (25, 8), where 8 = index 433 ((51*8)+25)
-const logoTiles = [432,381,330,279,228,483,534,585,636,227,226,635,634,633,582,225,276,275,326,376,530,581,529,478,427,325,221,272,629,578,577,526,525,474,473,271,322,321,372,371,422,421, 434,383,332,281,230,485,536,587,638,435,335,539,285,234,591,642,436,488,386,644,593,287,236,288,339,340,391,392,594,543,544,493,494,443,444];
-
 let toggled = false;
 
 const handleOnClick = index => {
@@ -30,10 +26,6 @@ const createTile = (index) => {
     const tile = document.createElement("div");
     tile.classList.add("tile");
 
-    // Create logo from tiles
-    if(logoTiles.includes(index)){
-        tile.classList.add("logoTile");
-    }
 
     // Nest div inside a tile
     const nestedTile = document.createElement("div");
