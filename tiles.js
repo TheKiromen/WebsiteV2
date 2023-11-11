@@ -13,6 +13,7 @@ const handleOnClick = index => {
 
     let colNum = (index % 51)+1;
     let distToCenter = Math.abs(colNum - Math.ceil(cols/2));
+    // TODO: Pick good duration values for appropriate easing func
     // animation length between 2-6s depending on distance from center column
     let duration = distToCenter * (4000/25) + 2000;
 
@@ -28,7 +29,9 @@ const handleOnClick = index => {
     anime({
         targets: "#logoImg",
         opacity: toggled ? 1 : 0,
-        duration: duration
+        duration: duration,
+        // TODO: Pick good looking easing function
+        easing: "easeInOutQuad"
     });
 
 }
@@ -63,6 +66,9 @@ const createGrid = () => {
     // Recalculate tile size
     tileSize = document.body.clientWidth/cols; 
     toggled = false;
+
+    // Hide the logo
+    document.getElementById("logoImg").style.opacity = 0;
 
     createTiles(cols * rows);
 }
