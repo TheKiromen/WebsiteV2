@@ -17,8 +17,17 @@ let isPointerVisible = true;
 // TODO: Make animation for idle (click effect)
 // TODO: Find better pointer image/scale current one down
 const hidePointer = async () => {
-    let pointer = document.getElementById("pointerImage");
-    pointer.style.display = "none";
+    await anime({
+        targets: "#pointerImage",
+        opacity: 0,
+        duration: 500,
+        easing: "linear",
+        complete: function(anim){
+            let pointer = document.getElementById("pointerImage");
+            pointer.style.display = "none";
+        }
+    })
+    
 }
 
 const handleOnClick = index => {
@@ -80,9 +89,10 @@ const createGrid = () => {
     // Clear out the nodes
     wrapper.innerHTML = "";
 
-    // Recalculate tile size
+    // Recalculate variables
     tileSize = document.body.clientWidth/cols; 
     toggled = false;
+    isPointerVisible = true;
 
     createTiles(cols * rows);
 }
