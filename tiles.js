@@ -8,12 +8,27 @@ wrapper.style.setProperty("--rows", rows);
 
 // List of node indexes that compose a logo
 const logoTiles = [433,382,383,434,432,483,484,331,332,333,535,534,533,281,282,585,584,230,231,232,636,635,634,685,686,180,181,234,285,632,581,286,337,338,389,390,580,529,528,477,476,425,424,441,442,492,491,542,541,592,591,642,374,375,324,325,274,275,224,129,130,737,736];
+const centerTileIndex = 433;
 
 let toggled = false;
+let isPointerVisible = true;
+
+// TODO: Make better animation for hiding
+// TODO: Make animation for idle (click effect)
+// TODO: Find better pointer image/scale current one down
+const hidePointer = async () => {
+    let pointer = document.getElementById("pointerImage");
+    pointer.style.display = "none";
+}
 
 const handleOnClick = index => {
-    toggled = !toggled;
+    if(isPointerVisible){
+        hidePointer();
+        isPointerVisible = false;
+    }
 
+    toggled = !toggled;
+    
     anime({
         targets: ".tile",
         opacity: toggled ? 0 : 1,
@@ -36,11 +51,18 @@ const createTile = (index) => {
         tile.classList.add("logoTile");
     }
 
-
     // Nest div inside a tile
     const nestedTile = document.createElement("div");
     nestedTile.classList.add("nestedTile");
     tile.appendChild(nestedTile);
+
+    // Add animated pointer
+    if(index == centerTileIndex){
+        let pointerImage = document.createElement("img");
+        pointerImage.src = "pointer.png";
+        pointerImage.id = "pointerImage";
+        nestedTile.appendChild(pointerImage);
+    }
 
     nestedTile.onclick = e => handleOnClick(index);
     return tile;

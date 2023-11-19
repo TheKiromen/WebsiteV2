@@ -76,3 +76,10 @@ body{
 .logoTile{
     opacity: 1 !important;
 }
+
+#pointerImage{
+    position:absolute;
+    width: 300%;
+    height: 300%;
+    z-index: 10;
+}
