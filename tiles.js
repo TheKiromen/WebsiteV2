@@ -20,7 +20,9 @@ const handleOnClick = index => {
         delay: anime.stagger(10, {
             grid: [cols, rows],
             from: index
-        })
+        }),
+        easing: 'easeOutExpo',
+        duration:400
       });
 }
 
@@ -33,6 +35,7 @@ const createTile = (index) => {
     if(logoTiles.includes(index)){
         tile.classList.add("logoTile");
     }
+
 
     // Nest div inside a tile
     const nestedTile = document.createElement("div");
@@ -61,7 +64,6 @@ const createGrid = () => {
 
     createTiles(cols * rows);
 }
-
 
 window.onresize = () => createGrid();
 createTiles(cols * rows);
