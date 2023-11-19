@@ -13,15 +13,13 @@ const centerTileIndex = 433;
 let toggled = false;
 let isPointerVisible = true;
 
-// TODO: Make better animation for hiding
 // TODO: Make animation for idle (click effect)
-// TODO: Find better pointer image/scale current one down
 const hidePointer = async () => {
-    await anime({
+    anime({
         targets: "#pointerImage",
         opacity: 0,
-        duration: 500,
-        easing: "linear",
+        duration: 300,
+        easing: "easeInQuint",
         complete: function(anim){
             let pointer = document.getElementById("pointerImage");
             pointer.style.display = "none";
@@ -48,6 +46,18 @@ const handleOnClick = index => {
         easing: 'easeOutExpo',
         duration:400
       });
+}
+
+const animatePointer = () => {
+    console.log("TEST");
+    anime({
+        targets: "#pointerImage",
+        width: "200%",
+        height: "200%",
+        loop: true,
+        direction: "alternate",
+        easing: "easeInElastic"
+    })
 }
 
 const createTile = (index) => {
@@ -95,7 +105,9 @@ const createGrid = () => {
     isPointerVisible = true;
 
     createTiles(cols * rows);
+    animatePointer();
 }
 
 window.onresize = () => createGrid();
 createTiles(cols * rows);
+animatePointer();
