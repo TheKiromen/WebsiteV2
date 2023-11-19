@@ -13,7 +13,6 @@ const centerTileIndex = 433;
 let toggled = false;
 let isPointerVisible = true;
 
-// TODO: Make animation for idle (click effect)
 const hidePointer = async () => {
     anime({
         targets: "#pointerImage",
@@ -49,12 +48,12 @@ const handleOnClick = index => {
 }
 
 const animatePointer = () => {
-    console.log("TEST");
     anime({
         targets: "#pointerImage",
         width: "200%",
         height: "200%",
         loop: true,
+        duration: 1000,
         direction: "alternate",
         easing: "easeInElastic"
     })
