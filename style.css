@@ -92,5 +92,33 @@ body{
 
 #footer{
     width: 100%;
+    padding: 1% 0 1% 0;
+    text-align: center;
     background-color: var(--primary);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem 0.2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.6fr;
+    grid-template-areas: 
+        "contact_header contact_header contact_header"
+        "github mail linkedin";
+}
+
+#contact_header{
+    grid-area: contact_header;
+    margin-bottom: 10px;
+}
+
+#github{
+    grid-area: github;
+}
+
+#mail{
+    grid-area: mail;
+}
+
+#linkedin{
+    grid-area: linkedin;
 }
