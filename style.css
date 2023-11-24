@@ -92,6 +92,7 @@ body{
 
 #footer{
     width: 100%;
+    font-size: 1.61vmax;
     padding: 1% 0 1% 0;
     text-align: center;
     color: var(--text);
@@ -99,7 +100,7 @@ body{
     font-weight: bold;
     background-color: var(--primary);
     display: grid;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     gap: 0.2rem 0.2rem;
     grid-template-columns: 1fr 1fr 1fr;
@@ -111,7 +112,11 @@ body{
 
 #contact_header{
     grid-area: contact_header;
+    width:30%;
+    font-size: 2vmax;
     margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--detail);
 }
 
 #github{
