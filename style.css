@@ -94,6 +94,9 @@ body{
     width: 100%;
     padding: 1% 0 1% 0;
     text-align: center;
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     background-color: var(--primary);
     display: grid;
     justify-content: center;
