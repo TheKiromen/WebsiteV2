@@ -12,6 +12,10 @@
     margin: 0;
 }
 
+a{
+    all: unset;
+}
+
 body{
     background-color: var(--secondary);
 }
@@ -92,7 +96,7 @@ body{
 
 #footer{
     width: 100%;
-    font-size: 1.61vmax;
+    font-size: 25px;
     padding: 1% 0 1% 0;
     text-align: center;
     color: var(--text);
@@ -110,13 +114,28 @@ body{
         "github mail linkedin";
 }
 
+@media only screen and (max-width:1000px){
+    #footer{
+        font-size: 18px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "contact_header"
+        "github" 
+        "mail" 
+        "linkedin";
+    }
+}
+
+#footer > div{
+    border-bottom: var(--detail) solid 3px;
+    padding:10px;
+    cursor: default;
+}
+
 #contact_header{
     grid-area: contact_header;
-    width:30%;
-    font-size: 2vmax;
     margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 3px solid var(--detail);
 }
 
 #github{
