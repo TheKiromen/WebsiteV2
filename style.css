@@ -25,6 +25,12 @@ body{
     text-align: center;
 }
 
+@media only screen and (max-width:1000px){
+    body{
+        font-size:18px;
+    }
+}
+
 #banner{
     animation: background-pan 5s linear infinite;
     background: linear-gradient(
@@ -101,58 +107,13 @@ body{
 
 #footer{
     width: 100%;
-    padding: 1% 0 1% 0;
+    font-size: 1em;
     background-color: var(--primary);
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    gap: 0.2rem 0.2rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1.6fr;
-    grid-template-areas: 
-        "contact_header contact_header contact_header"
-        "github mail linkedin";
-}
-
-@media only screen and (max-width:1000px){
-    #footer{
-        font-size: 18px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "contact_header"
-        "github" 
-        "mail" 
-        "linkedin";
-    }
-}
-
-#footer > div{
-    border-bottom: var(--detail) solid 3px;
-    padding:10px;
-    cursor: default;
-}
-
-#contact_header{
-    grid-area: contact_header;
-    margin-bottom: 10px;
-}
-
-#github{
-    grid-area: github;
-}
-
-#mail{
-    grid-area: mail;
-}
-
-#linkedin{
-    grid-area: linkedin;
 }
 
 #copyright{
     background-color: var(--primary);
-    font-size: 20px;
+    font-size: 0.7em;
     color: var(--secondary);
     font-family: Arial, sans-serif;
     font-weight: bold;
