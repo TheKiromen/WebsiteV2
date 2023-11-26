@@ -113,11 +113,11 @@ body{
     cursor: default;
 }
 
-#footer > i{
+#footer > a{
     margin-left:25px;
 }
 
-#footer > i:hover{
+#footer > a:hover{
     color: var(--highlight);
     cursor: pointer;
 }
