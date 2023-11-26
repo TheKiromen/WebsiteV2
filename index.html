@@ -9,6 +9,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src="anime.min.js"></script>
     <script src='banner.js' defer></script>
+    
 </head>
 <body>
     <div id="banner"></div>
@@ -31,6 +32,10 @@
             <a href="https://google.com">LinkeIn Profile</a>
         </div>
     </div>
-    <div id="copyright">TODO</div>
+    <div id="copyright"></div>
+    <script>
+        var copyright = "© Dominik Kruczek " + (new Date()).getFullYear();
+        document.getElementById("copyright").innerHTML = copyright;
+    </script>
 </body>
 </html>
