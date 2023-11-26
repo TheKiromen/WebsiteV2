@@ -18,6 +18,11 @@ a{
 
 body{
     background-color: var(--secondary);
+    font-size: 25px;
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
 }
 
 #banner{
@@ -96,12 +101,7 @@ body{
 
 #footer{
     width: 100%;
-    font-size: 25px;
     padding: 1% 0 1% 0;
-    text-align: center;
-    color: var(--text);
-    font-family: Arial, sans-serif;
-    font-weight: bold;
     background-color: var(--primary);
     display: grid;
     justify-items: center;
