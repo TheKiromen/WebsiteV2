@@ -20,6 +20,7 @@ body{
     background-color: var(--secondary);
     font-size: 25px;
     color: var(--text);
+    /* TODO: Pick some good font */
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-align: center;
@@ -113,12 +114,19 @@ body{
     cursor: default;
 }
 
+#footer > div{
+    margin-bottom:25px;
+}
+
 #footer > a{
     margin-left:25px;
+    padding-bottom: 7px;
+    border-bottom: var(--text) solid 3px;
 }
 
 #footer > a:hover{
     color: var(--highlight);
+    border-bottom: var(--highlight) solid 3px;
     cursor: pointer;
 }
 
