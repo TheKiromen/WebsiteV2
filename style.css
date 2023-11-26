@@ -109,12 +109,23 @@ body{
     width: 100%;
     font-size: 1em;
     background-color: var(--primary);
+    padding: 25px 0 15px 0;
+    cursor: default;
+}
+
+#footer > i{
+    margin-left:25px;
+}
+
+#footer > i:hover{
+    color: var(--highlight);
+    cursor: pointer;
 }
 
 #copyright{
     background-color: var(--primary);
     font-size: 0.7em;
-    color: var(--secondary);
+    color:#445662;
     font-family: Arial, sans-serif;
     font-weight: bold;
     padding:15px;
