@@ -149,3 +149,13 @@ body{
 #linkedin{
     grid-area: linkedin;
 }
+
+#copyright{
+    background-color: var(--primary);
+    font-size: 15px;
+    color: var(--secondary);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding:20px;
+    text-align: center;
+}
