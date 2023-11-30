@@ -125,6 +125,7 @@ body{
 
 #footer > a:hover{
     color: var(--highlight);
+    transition: 0.3s;
     cursor: pointer;
 }
 
