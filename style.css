@@ -121,12 +121,10 @@ body{
 #footer > a{
     margin-left:25px;
     padding-bottom: 7px;
-    border-bottom: var(--text) solid 3px;
 }
 
 #footer > a:hover{
     color: var(--highlight);
-    border-bottom: var(--highlight) solid 3px;
     cursor: pointer;
 }
 
