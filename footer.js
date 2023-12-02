@@ -6,7 +6,8 @@ const onMouseEnter = e => {
     let icon = e.srcElement.childNodes[1];
     anime({
         targets:icon,
-        rotate: 360
+        rotate: 360,
+        scale: 1.25
     })
     console.log(icon);
 }
@@ -15,7 +16,8 @@ const onMouseLeave = e => {
     let icon = e.srcElement.childNodes[1];
     anime({
         targets:icon,
-        rotate: 0
+        rotate: 0,
+        scale: 1
     })
     console.log(icon);
 }
