@@ -120,12 +120,25 @@ body{
 
 #contact_wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.85fr 1fr;
     grid-template-rows: 1fr;
+    row-gap: 15px;
 }
 
 #contact_wrapper > a{
-    padding-bottom: 7px;
+    padding: 10px;
+}
+
+#github{
+    place-self: end;
+}
+
+#mail{
+    place-self: center;
+}
+
+#linkedin{
+    place-self: start;
 }
 
 #contact_wrapper > a:hover{
@@ -140,13 +153,21 @@ body{
     color:#445662;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    padding:15px;
+    padding-bottom: 15px;
     text-align: center;
 }
 
-@media only screen and (max-width:750px){
+@media only screen and (max-width:800px){
     #contact_wrapper{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #contact_wrapper > a{
+        place-self: center;
+    }
+
+    #footer > div{
+        margin-bottom: 15px;
     }
 }
