@@ -9,7 +9,6 @@ const onMouseEnter = e => {
         rotate: 360,
         scale: 1.25
     })
-    console.log(icon);
 }
 
 const onMouseLeave = e => {
@@ -19,7 +18,6 @@ const onMouseLeave = e => {
         rotate: 0,
         scale: 1
     })
-    console.log(icon);
 }
 
 github.addEventListener("mouseenter", onMouseEnter);
