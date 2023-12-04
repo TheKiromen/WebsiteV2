@@ -106,12 +106,30 @@ body{
     width: 100%;
 }
 
+#about{
+    width: 70%;
+    margin: auto;
+    padding: 25px 0 25px 0;
+}
+
+#about > h2{
+    margin-bottom: 15px;
+}
+
+#content > div:not(#about){
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
 .anim{
-    width:30%
+    width: 30%;
+    display: inline-block;
 }
 
 .desc{
-    width:70%;
+    width: 60%;
+    display: inline-block;
+    text-align: justify;
 }
 
 #footer{
