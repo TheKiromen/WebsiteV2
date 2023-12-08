@@ -20,8 +20,7 @@ body{
     background-color: var(--secondary);
     font-size: 25px;
     color: var(--text);
-    /* TODO: Pick some good font */
-    font-family: Arial, sans-serif;
+    font-family: Verdana, sans-serif;
     font-weight: bold;
     text-align: center;
 }
