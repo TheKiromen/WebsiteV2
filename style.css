@@ -105,14 +105,6 @@ body{
     width: 100%;
 }
 
-#content_details{
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    row-gap: 50px;
-    grid-template-columns: 1fr 1fr;
-}
-
 #about{
     width: 70%;
     margin: auto;
@@ -122,11 +114,6 @@ body{
 
 #about > h2{
     margin-bottom: 15px;
-}
-
-.desc{
-    width: 90%;
-    text-align: justify;
 }
 
 #footer{
