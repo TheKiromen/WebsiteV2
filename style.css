@@ -116,6 +116,12 @@ body{
     margin-bottom: 15px;
 }
 
+.content-row{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows:  1fr;
+}
+
 #footer{
     width: 100%;
     font-size: 1em;
@@ -182,7 +188,8 @@ body{
         margin-bottom: 15px;
     }
 
-    #content_details{
+    .content-row{
         grid-template-columns: 1fr;
+        grid-template-rows:  1fr 1fr;
     }
 }
