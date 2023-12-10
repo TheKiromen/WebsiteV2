@@ -122,6 +122,12 @@ body{
     grid-template-rows:  1fr;
 }
 
+.content-row > div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #cooking-img{
     background-image: url("Images/cooking.jpg");
 }
