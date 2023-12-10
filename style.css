@@ -122,6 +122,18 @@ body{
     grid-template-rows:  1fr;
 }
 
+#cooking-img{
+    background-image: url("Images/cooking.jpg");
+}
+
+#books-img{
+    background-image: url("Images/books.jpg");
+}
+
+#programming-img{
+    background-image: url("Images/programming.jpg");
+}
+
 #footer{
     width: 100%;
     font-size: 1em;
