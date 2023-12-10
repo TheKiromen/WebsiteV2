@@ -140,13 +140,17 @@ body{
     background-image: url("Images/programming.jpg");
 }
 
+.content-row > span{
+    padding: 50px 0 50px 0;
+    text-align: justify;
+}
+
 #footer{
     width: 100%;
     font-size: 1em;
     background-color: var(--primary);
     padding: 25px 0 15px 0;
     cursor: default;
-    margin-top: 50px;
 }
 
 #footer > div{
