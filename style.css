@@ -25,9 +25,15 @@ body{
     text-align: center;
 }
 
-@media only screen and (max-width:1100px){
+@media only screen and (max-width:1200px){
     body{
         font-size:18px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    body{
+        font-size:15px;
     }
 }
 
@@ -116,35 +122,6 @@ body{
     margin-bottom: 15px;
 }
 
-.content-row{
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows:  1fr;
-}
-
-.content-row > div{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#cooking-img{
-    background-image: url("Images/cooking.jpg");
-}
-
-#books-img{
-    background-image: url("Images/books.jpg");
-}
-
-#programming-img{
-    background-image: url("Images/programming.jpg");
-}
-
-.content-row > span{
-    padding: 50px 0 50px 0;
-    text-align: justify;
-}
-
 #footer{
     width: 100%;
     font-size: 1em;
@@ -196,7 +173,7 @@ body{
     text-align: center;
 }
 
-@media only screen and (max-width:800px){
+@media only screen and (max-width:900px){
     #contact_wrapper{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -208,10 +185,5 @@ body{
 
     #footer > div{
         margin-bottom: 15px;
-    }
-
-    .content-row{
-        grid-template-columns: 1fr;
-        grid-template-rows:  1fr 1fr;
     }
 }
