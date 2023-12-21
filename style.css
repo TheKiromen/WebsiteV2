@@ -17,7 +17,7 @@ a{
 }
 
 body{
-    background-color: var(--secondary);
+    background-color: var(--primary);
     font-size: 25px;
     color: var(--text);
     font-family: Verdana, sans-serif;
@@ -122,6 +122,23 @@ body{
     margin-bottom: 15px;
 }
 
+#grid_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: var(--secondary);
+}
+
+.content_image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.content_description{
+    text-align: justify;
+}
+
 #footer{
     width: 100%;
     font-size: 1em;
@@ -185,5 +202,11 @@ body{
 
     #footer > div{
         margin-bottom: 15px;
+    }
+
+    /* TODO fix positioning, use template position names? */
+    #grid_content{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr;
     }
 }
