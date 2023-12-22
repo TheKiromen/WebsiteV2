@@ -17,7 +17,7 @@ a{
 }
 
 body{
-    background-color: var(--secondary);
+    background-color: var(--primary);
     font-size: 25px;
     color: var(--text);
     font-family: Verdana, sans-serif;
@@ -122,11 +122,61 @@ body{
     margin-bottom: 15px;
 }
 
+#grid_content{
+    display: grid;
+    background-color: var(--secondary);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "cooking_img cooking_desc"
+        "books_desc books_img"
+        "programming_img programming_desc";
+}
+
+.content_image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.content_description{
+    text-align: justify;
+    padding: 5%;
+}
+
+.content_description > h3{
+    margin-bottom: 15px;
+}
+
+#cooking_image{
+    grid-area: cooking_img;
+}
+
+#books_image{
+    grid-area: books_img;
+}
+
+#programming_image{
+    grid-area: programming_img;
+}
+
+#cooking_description{
+    grid-area: cooking_desc;
+}
+
+#books_description{
+    grid-area: books_desc;
+}  
+
+#programming_description{
+    grid-area: programming_desc;
+}
+
 #footer{
     width: 100%;
     font-size: 1em;
     background-color: var(--primary);
-    padding: 25px 0 15px 0;
+    padding: 50px 0 15px 0;
     cursor: default;
 }
 
@@ -185,5 +235,17 @@ body{
 
     #footer > div{
         margin-bottom: 15px;
+    }
+
+    #grid_content{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr;
+        grid-template-areas: 
+            "cooking_img"
+            "cooking_desc"
+            "books_img"
+            "books_desc"
+            "programming_img"
+            "programming_desc";
     }
 }
