@@ -137,6 +137,11 @@ body{
 
 .content_description{
     text-align: justify;
+    padding: 5%;
+}
+
+.content_description > h3{
+    margin-bottom: 10px;
 }
 
 #footer{
