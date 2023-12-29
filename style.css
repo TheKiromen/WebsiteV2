@@ -113,6 +113,7 @@ body{
 
 #about{
     width: 70%;
+    max-width: 1500px;
     margin: auto;
     padding: 25px 0 25px 0;
     margin-bottom: 25px;
