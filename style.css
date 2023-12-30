@@ -116,7 +116,8 @@ body{
     max-width: 1500px;
     margin: auto;
     padding: 25px 0 25px 0;
-    margin-bottom: 25px;
+    margin-bottom: 3%;
+    margin-top: 2%;
 }
 
 #about > h2{
@@ -130,6 +131,7 @@ body{
 
 #contact_redirect:hover{
     color: var(--highlight);
+    transition: 300ms;
 }
 
 #grid_content{
