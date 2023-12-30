@@ -123,6 +123,15 @@ body{
     margin-bottom: 15px;
 }
 
+#contact_redirect{
+    color: var(--detail);
+    cursor: pointer;
+}
+
+#contact_redirect:hover{
+    color: var(--highlight);
+}
+
 #grid_content{
     display: grid;
     background-color: var(--secondary);
