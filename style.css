@@ -148,12 +148,17 @@ body{
 .content_image{
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: 125%;
+
 }
 
 .content_description{
     text-align: justify;
     padding: 5%;
+}
+
+.content_description > span{
+    font-size: 0.8em;
 }
 
 .content_description > h3{
