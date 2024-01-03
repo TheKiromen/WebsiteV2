@@ -148,8 +148,7 @@ body{
 .content_image{
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 125%;
-
+    background-size: 140%;
 }
 
 .content_description{
@@ -161,7 +160,7 @@ body{
     font-size: 0.8em;
 }
 
-.content_description > h3{
+.content_description > h4{
     margin-bottom: 15px;
 }
 
