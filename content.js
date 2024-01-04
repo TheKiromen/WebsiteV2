@@ -8,12 +8,19 @@ const ContentOnMouseEnter = e => {
     let section = e.target.id.split("_")[0];
     let title = content[section][1].childNodes[1].childNodes;
     // Get subsection title letters
-    let animationTargets = Array.prototype.slice.call(title).slice(1,title.length-1);
+    let titleLetters = Array.prototype.slice.call(title).slice(1,title.length-1);
+    // Get subsection image
+    let sectionImage = content[section][0];
+
+    // TODO: Add some animation to the images
     anime({
-        targets: animationTargets,
+        targets: titleLetters,
         color: "#00f4ff",
-        // color: "#00ADB5",
-        delay: anime.stagger(10)
+        scale: 1.25,
+        'letter-spacing': "5px",
+        easing: "easeInOutQuad",
+        duration: 100,
+        delay: anime.stagger(30)
     })
 }
 
@@ -23,10 +30,17 @@ const ContentOnMouseLeave = e => {
     let title = content[section][1].childNodes[1].childNodes;
     // Get subsection title letters
     let animationTargets = Array.prototype.slice.call(title).slice(1,title.length-1);
+    // Get subsection image
+    let sectionImage = content[section][0];
+    
     anime({
         targets: animationTargets,
         color: "#EEEEEE",
-        delay: anime.stagger(10)
+        scale: 1,
+        'letter-spacing': "0px",
+        easing: "easeInOutQuad",
+        duration: 100,
+        delay: anime.stagger(30)
     })
 }
 

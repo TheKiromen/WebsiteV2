@@ -20,10 +20,10 @@ const ContactOnMouseLeave = e => {
     })
 }
 
-github.addEventListener("mouseenter", ContentOnMouseEnter);
-mail.addEventListener("mouseenter", ContentOnMouseEnter);
-linkedin.addEventListener("mouseenter", ContentOnMouseEnter);
+github.addEventListener("mouseenter", ContactOnMouseEnter);
+mail.addEventListener("mouseenter", ContactOnMouseEnter);
+linkedin.addEventListener("mouseenter", ContactOnMouseEnter);
 
-github.addEventListener("mouseleave", ContentOnMouseLeave);
-mail.addEventListener("mouseleave", ContentOnMouseLeave);
-linkedin.addEventListener("mouseleave", ContentOnMouseLeave);
+github.addEventListener("mouseleave", ContactOnMouseLeave);
+mail.addEventListener("mouseleave", ContactOnMouseLeave);
+linkedin.addEventListener("mouseleave", ContactOnMouseLeave);

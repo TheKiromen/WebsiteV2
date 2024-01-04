@@ -164,6 +164,10 @@ body{
     margin-bottom: 15px;
 }
 
+.content_description > h4 > span{
+    display: inline-block;
+}
+
 #cooking_image{
     grid-area: cooking_img;
 }
