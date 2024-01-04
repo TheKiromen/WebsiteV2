@@ -6,9 +6,10 @@ let content = {"cooking":cooking, "books":books, "programming":programming};
 const ContentOnMouseEnter = e => {
     // Get target subsection
     let section = e.target.id.split("_")[0];
+    let title = content[section][1].childNodes[1].childNodes;
     // Get subsection title letters
-    let animationTargets = content[section][1];
-    console.log(animationTargets);
+    let animationTargets = Array.prototype.slice.call(title).slice(1,title.length-1);
+    // console.log(animationTargets);
     // TODO: Check if prev target section == current, if yes dont animate again
 }
 
