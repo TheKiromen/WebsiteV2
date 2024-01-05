@@ -12,7 +12,6 @@ const ContentOnMouseEnter = e => {
     // Get subsection image
     let sectionImage = content[section][0];
 
-    // TODO: Add some animation to the images
     anime({
         targets: titleLetters,
         color: "#00f4ff",
@@ -21,6 +20,13 @@ const ContentOnMouseEnter = e => {
         easing: "easeInOutQuad",
         duration: 100,
         delay: anime.stagger(30)
+    })
+
+    anime({
+        targets: sectionImage,
+        "background-size": "150%",
+        easing: "easeInOutQuad",
+        duration: 300,
     })
 }
 
@@ -41,6 +47,13 @@ const ContentOnMouseLeave = e => {
         easing: "easeInOutQuad",
         duration: 100,
         delay: anime.stagger(30)
+    })
+
+    anime({
+        targets: sectionImage,
+        "background-size": "140%",
+        easing: "easeInOutQuad",
+        duration: 300,
     })
 }
 
