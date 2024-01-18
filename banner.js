@@ -87,7 +87,7 @@ const createTile = (index) => {
     // Add animated pointer
     if(index == centerTileIndex){
         let pointerImage = document.createElement("img");
-        pointerImage.src = "pointer.png";
+        pointerImage.src = "images/pointer.png";
         pointerImage.id = "pointerImage";
         nestedTile.appendChild(pointerImage);
     }

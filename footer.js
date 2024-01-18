@@ -2,7 +2,7 @@ let github = document.getElementById("github");
 let mail = document.getElementById("mail");
 let linkedin = document.getElementById("linkedin");
 
-const onMouseEnter = e => {
+const ContactOnMouseEnter = e => {
     let icon = e.srcElement.childNodes[1];
     anime({
         targets:icon,
@@ -11,7 +11,7 @@ const onMouseEnter = e => {
     })
 }
 
-const onMouseLeave = e => {
+const ContactOnMouseLeave = e => {
     let icon = e.srcElement.childNodes[1];
     anime({
         targets:icon,
@@ -20,10 +20,10 @@ const onMouseLeave = e => {
     })
 }
 
-github.addEventListener("mouseenter", onMouseEnter);
-mail.addEventListener("mouseenter", onMouseEnter);
-linkedin.addEventListener("mouseenter", onMouseEnter);
+github.addEventListener("mouseenter", ContactOnMouseEnter);
+mail.addEventListener("mouseenter", ContactOnMouseEnter);
+linkedin.addEventListener("mouseenter", ContactOnMouseEnter);
 
-github.addEventListener("mouseleave", onMouseLeave);
-mail.addEventListener("mouseleave", onMouseLeave);
-linkedin.addEventListener("mouseleave", onMouseLeave);
+github.addEventListener("mouseleave", ContactOnMouseLeave);
+mail.addEventListener("mouseleave", ContactOnMouseLeave);
+linkedin.addEventListener("mouseleave", ContactOnMouseLeave);
