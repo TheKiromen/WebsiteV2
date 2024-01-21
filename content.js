@@ -24,8 +24,8 @@ const ContentOnMouseEnter = e => {
 
     anime({
         targets: sectionImage,
-        "background-size": "150%",
         easing: "easeInOutQuad",
+        filter: "brightness(1)",
         duration: 300,
     })
 }
@@ -51,8 +51,8 @@ const ContentOnMouseLeave = e => {
 
     anime({
         targets: sectionImage,
-        "background-size": "140%",
         easing: "easeInOutQuad",
+        filter: "brightness(0.7)",
         duration: 300,
     })
 }
